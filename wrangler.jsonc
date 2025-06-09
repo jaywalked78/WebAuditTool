@@ -1,5 +1,5 @@
 {
-  "name": "bdr-web-audit-tool",
+  "name": "brd-web-audit-tool",
   "compatibility_date": "2025-06-09",
   "assets": {
     "directory": "./dist"
