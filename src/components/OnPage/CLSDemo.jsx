@@ -99,9 +99,9 @@ const CLSDemo = ({ clsScore }) => {
   return (
     <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">CLS Visualization Demo</h3>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">CLS Visualization Demo Example</h3>
         <div className="flex items-center space-x-2">
-          <div className="text-sm text-red-600 dark:text-red-400 font-medium">CLS: {clsScore.toFixed(3)} (Poor)</div>
+          <div className="text-sm text-red-600 dark:text-red-400 font-medium">CLS: {clsScore.toFixed(3)} (Needs Improvement)</div>
           <button onClick={startDemo} disabled={isPlaying} className="flex items-center space-x-1 px-3 py-1 bg-blue-500 text-white rounded-md text-sm hover:bg-blue-600 disabled:opacity-50 transition-colors">
             <Play className="w-3 h-3" /> <span>Play Demo</span>
           </button>

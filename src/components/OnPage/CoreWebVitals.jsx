@@ -15,7 +15,7 @@ const MetricCard = ({ icon: Icon, title, value, unit, status, threshold, descrip
       text: 'text-yellow-700 dark:text-yellow-400',
       icon: 'text-yellow-600 dark:text-yellow-400'
     },
-    poor: {
+    'needs-improvement': {
       bg: 'bg-red-50 dark:bg-red-900/20',
       border: 'border-red-200 dark:border-red-800',
       text: 'text-red-700 dark:text-red-400',
@@ -32,7 +32,7 @@ const MetricCard = ({ icon: Icon, title, value, unit, status, threshold, descrip
           <Icon className={`w-5 h-5 ${colors.icon}`} />
         </div>
         <div className={`px-2 py-1 rounded text-xs font-medium ${colors.text} ${colors.bg} border ${colors.border}`}>
-          {status.charAt(0).toUpperCase() + status.slice(1)}
+          {status === 'needs-improvement' ? 'Needs Improvement' : status.charAt(0).toUpperCase() + status.slice(1)}
         </div>
       </div>
       
@@ -58,19 +58,19 @@ const CoreWebVitals = ({ data }) => {
   const getLCPStatus = (value) => {
     if (value <= 2500) return 'good';
     if (value <= 4000) return 'warning';
-    return 'poor';
+    return 'needs-improvement';
   };
 
   const getFIDStatus = (value) => {
     if (value <= 100) return 'good';
     if (value <= 300) return 'warning';
-    return 'poor';
+    return 'needs-improvement';
   };
 
   const getCLSStatus = (value) => {
     if (value <= 0.1) return 'good';
     if (value <= 0.25) return 'warning';
-    return 'poor';
+    return 'needs-improvement';
   };
 
   const metrics = [
