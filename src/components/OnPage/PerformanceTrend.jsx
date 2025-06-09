@@ -5,12 +5,12 @@ import { TrendingUp, TrendingDown } from 'lucide-react';
 const PerformanceTrend = () => {
   // Sample data showing performance over time
   const performanceData = [
-    { date: 'Jan 1', score: 85, cls: 0.15, lcp: 1200, loadTime: 2100 },
-    { date: 'Jan 8', score: 87, cls: 0.18, lcp: 1150, loadTime: 2050 },
-    { date: 'Jan 15', score: 89, cls: 0.22, lcp: 1100, loadTime: 2000 },
-    { date: 'Jan 22', score: 91, cls: 0.28, lcp: 1080, loadTime: 1950 },
-    { date: 'Jan 29', score: 94, cls: 0.35, lcp: 1050, loadTime: 1900 },
-    { date: 'Feb 5', score: 96, cls: 0.38, lcp: 1020, loadTime: 1850 },
+    { date: 'Jan 1', score: 95.8, cls: 0.35, lcp: 1080, loadTime: 1850 },
+    { date: 'Jan 8', score: 96.1, cls: 0.36, lcp: 1070, loadTime: 1840 },
+    { date: 'Jan 15', score: 96.4, cls: 0.37, lcp: 1060, loadTime: 1830 },
+    { date: 'Jan 22', score: 96.9, cls: 0.38, lcp: 1050, loadTime: 1820 },
+    { date: 'Jan 29', score: 97.3, cls: 0.39, lcp: 1040, loadTime: 1815 },
+    { date: 'Feb 5', score: 97.8, cls: 0.40, lcp: 1020, loadTime: 1812 },
     { date: 'Today', score: 98.17, cls: 0.404, lcp: 1004, loadTime: 1810 }
   ];
 
