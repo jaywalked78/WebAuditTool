@@ -215,8 +215,8 @@ const CLSDemo = ({ clsScore }) => {
         {/* Conversion Counter Overlay */}
         <div className="absolute top-4 left-4 bg-white dark:bg-gray-800 p-3 rounded shadow-lg z-30 border border-gray-200 dark:border-gray-600">
           <div className="text-xs text-gray-600 dark:text-gray-400">Lost This Month:</div>
-          <div className="text-lg font-bold text-red-600 dark:text-red-400">30 leads</div>
-          <div className="text-sm font-semibold text-red-700 dark:text-red-500">= $150,000</div>
+          <div className="text-lg font-bold text-red-600 dark:text-red-400">2-3 leads</div>
+          <div className="text-sm font-semibold text-red-700 dark:text-red-500">= $12,500</div>
         </div>
 
         {/* Cursor & Click Effect Layer */}
@@ -228,7 +228,7 @@ const CLSDemo = ({ clsScore }) => {
       
       <div className="mt-4 p-4 bg-red-50 dark:bg-red-900/20 rounded-lg border border-red-200 dark:border-red-800">
         <p className="text-sm text-red-800 dark:text-red-200">
-          <strong>Business Impact:</strong> When Barlow fonts load, the entire header and hero section shift down by 44px (CLS: 0.404). New visitors trying to click "DISCOVER MORE" - your primary conversion CTA - miss the button entirely. This frustration causes them to leave, costing you $150,000/month in lost coaching opportunities.
+          <strong>Business Impact:</strong> When Barlow fonts load, the entire header and hero section shift down by 44px (CLS: 0.404). New visitors trying to click "DISCOVER MORE" - your primary conversion CTA - miss the button entirely. This frustration causes them to leave, costing you approximately $12,500/month (~$150,000 annually) in lost coaching opportunities.
         </p>
         <div className="mt-2 text-xs text-red-600 dark:text-red-400">
           <strong>Fix:</strong> Add <code className="bg-red-100 dark:bg-red-900 px-1 rounded">font-display: swap</code> and preload Barlow fonts to prevent layout shifts.

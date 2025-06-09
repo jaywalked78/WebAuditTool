@@ -7,7 +7,7 @@ function ActionableRoadmap({ device = 'desktop' }) {
     const baseRoadmap = {
       title: `${device === 'desktop' ? 'Desktop' : 'Mobile'} Performance Optimization Roadmap`,
       subtitle: 'Strategic implementation plan with measurable business outcomes',
-      totalTimeframe: device === 'desktop' ? '1-2 weeks' : '2-3 weeks',
+      totalTimeframe: '1-2 weeks',
       totalInvestment: device === 'desktop' ? '$3,500 - $5,000' : '$5,500 - $8,000',
       expectedROI: device === 'desktop' ? '$150,000 annual revenue recovery' : '$180,000 annual revenue recovery from mobile optimization'
     };
@@ -243,13 +243,9 @@ function ActionableRoadmap({ device = 'desktop' }) {
 
   const PhaseCard = ({ phase, index }) => {
     const isSelected = selectedPhase === phase.id;
-    const isEven = index % 2 === 0;
     
     return (
-      <div className={`relative ${isEven ? 'md:pr-8' : 'md:pl-8'}`}>
-        {/* Timeline line and dot */}
-        <div className="hidden md:block absolute top-6 w-4 h-4 bg-white border-4 border-blue-500 rounded-full" 
-             style={{ [isEven ? 'right' : 'left']: '-8px' }} />
+      <div className="relative">
         
         <div 
           className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 transition-all duration-200 cursor-pointer ${
@@ -280,16 +276,12 @@ function ActionableRoadmap({ device = 'desktop' }) {
               </span>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-2 gap-4 mb-4">
               <div>
                 <div className="text-sm text-gray-500">Duration</div>
                 <div className="font-semibold text-gray-800 dark:text-gray-100">{phase.duration}</div>
               </div>
               <div>
-                <div className="text-sm text-gray-500">Investment</div>
-                <div className="font-semibold text-gray-800 dark:text-gray-100">{phase.cost}</div>
-              </div>
-              <div className="col-span-2 md:col-span-1">
                 <div className="text-sm text-gray-500">Revenue Impact</div>
                 <div className="font-semibold text-green-600">{phase.revenue_impact}</div>
               </div>
@@ -344,14 +336,10 @@ function ActionableRoadmap({ device = 'desktop' }) {
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-4">{roadmapData.subtitle}</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
             <div className="text-sm text-blue-600 dark:text-blue-400">Total Timeframe</div>
             <div className="text-xl font-bold text-blue-800 dark:text-blue-300">{roadmapData.totalTimeframe}</div>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-4">
-            <div className="text-sm text-gray-600 dark:text-gray-400">Investment Range</div>
-            <div className="text-xl font-bold text-gray-800 dark:text-gray-100">{roadmapData.totalInvestment}</div>
           </div>
           <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
             <div className="text-sm text-green-600 dark:text-green-400">Expected ROI</div>
@@ -363,8 +351,6 @@ function ActionableRoadmap({ device = 'desktop' }) {
       <div className="p-6">
         {/* Timeline */}
         <div className="relative">
-          {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200 dark:bg-blue-800"></div>
           
           <div className="space-y-8">
             {roadmapData.phases.map((phase, index) => (

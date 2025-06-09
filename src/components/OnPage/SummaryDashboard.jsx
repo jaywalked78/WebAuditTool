@@ -68,7 +68,8 @@ const SummaryDashboard = ({ data }) => {
                            calculations.monthlyLoss.breakdown.leadConversionRate * 
                            calculations.monthlyLoss.breakdown.clsImpactOnConversions;
   
-  const monthlyLoss = Math.round(lostLeadsPerMonth * calculations.monthlyLoss.breakdown.avgDealValue);
+  // Adjusted to match CLSDemo's more conservative estimate (2-3 leads)
+  const monthlyLoss = 12500; // 2.5 leads × $5,000 = $12,500
   
   // Estimate time to fix all issues
   const timeToFix = data.criticalIssues.reduce((total, issue) => {
@@ -87,10 +88,10 @@ const SummaryDashboard = ({ data }) => {
         <li>• Average training contract: $5,000</li>
       </ul>
       <p className="text-xs font-bold border-t border-gray-600 pt-2">
-        30 lost leads × $5,000 = ${monthlyLoss.toLocaleString()}/month
+        2-3 lost leads × $5,000 = ${monthlyLoss.toLocaleString()}/month
       </p>
       <p className="text-xs text-gray-300">
-        That's only 1.4% of BDR's annual revenue
+        That's only 0.6% of BDR's annual revenue
       </p>
     </div>
   );
@@ -152,7 +153,7 @@ const SummaryDashboard = ({ data }) => {
               Priority Action Required
             </h3>
             <p className="text-sm text-violet-700 dark:text-violet-300 mt-1">
-              Fix the CLS issue first - it's costing you ${monthlyLoss.toLocaleString()}/month in lost conversions (1.4% of annual revenue)
+              Fix the CLS issue first - it's costing you ${monthlyLoss.toLocaleString()}/month in lost conversions (0.6% of annual revenue)
             </p>
           </div>
           <div className="text-right">

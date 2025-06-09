@@ -15,7 +15,7 @@ function LighthouseScores({ device = 'desktop' }) {
   const getScoreLabel = (score) => {
     if (score >= 90) return 'Good';
     if (score >= 50) return 'Needs Improvement';
-    return 'Poor';
+    return 'Needs Improvement';
   };
 
   const getScoreDetails = (category, score, device) => {
@@ -24,7 +24,7 @@ function LighthouseScores({ device = 'desktop' }) {
         title: 'Performance',
         description: device === 'desktop' 
           ? 'Strong server infrastructure (57ms TTFB) and fast content loading (1.1s LCP), but severely compromised by layout shifts.'
-          : 'Poor mobile performance with slow loading times and high blocking time. Critical for user experience.',
+          : 'Mobile performance needs improvement with slow loading times and high blocking time. Critical for user experience.',
         impact: device === 'desktop'
           ? 'The 0.532 CLS score is causing users to miss clicks on navigation and CTAs, directly impacting conversions.'
           : 'Mobile users face 4.2s load times and 890ms blocking time, leading to 53% higher bounce rates on mobile.',

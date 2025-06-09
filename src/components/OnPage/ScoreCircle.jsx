@@ -4,7 +4,7 @@ import gsap from 'gsap';
 const ScoreCircle = ({ score, maxScore = 100 }) => {
   const [displayScore, setDisplayScore] = useState(0);
   const [currentColor, setCurrentColor] = useState('#ef4444'); // Start with red
-  const [scoreLabel, setScoreLabel] = useState('Poor');
+  const [scoreLabel, setScoreLabel] = useState('Needs Improvement');
   const [dashOffset, setDashOffset] = useState(0);
   
   const circleRef = useRef(null);
@@ -49,7 +49,7 @@ const ScoreCircle = ({ score, maxScore = 100 }) => {
         
         if (progressRatio < 0.6) { // First 60% of animation
           setCurrentColor('#ef4444'); // red
-          setScoreLabel('Poor');
+          setScoreLabel('Needs Improvement');
         } else if (progressRatio < 0.85) { // 60% to 85% of animation 
           setCurrentColor('#f59e0b'); // yellow
           setScoreLabel('Good');
